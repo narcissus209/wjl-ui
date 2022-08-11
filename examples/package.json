@@ -1,0 +1,19 @@
+{
+  "name": "@wjl-ui/examples",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4",
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "wjl-ui": "workspace:^1.0.1"
+  }
+}
