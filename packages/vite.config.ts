@@ -7,10 +7,16 @@ const resolvePath = (path: string) => {
   return resolve(__dirname, path)
 }
 
+// https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': resolvePath('./'),
+    },
+  },
   build: {
     //打包文件目录
-    outDir: 'es',
+    outDir: 'dist',
     //压缩
     minify: false,
     //css分离
@@ -29,19 +35,19 @@ export default defineConfig({
           //不用打包成.es.js,这里我们想把它打包成.js
           entryFileNames: '[name].js',
           //配置打包根目录
-          dir: resolvePath('es'),
+          dir: resolvePath('dist/es'),
           //让打包目录和我们目录对应
           preserveModules: true,
-          preserveModulesRoot: './components',
+          preserveModulesRoot: '.',
         },
         {
           format: 'cjs',
           entryFileNames: '[name].js',
           //配置打包根目录
-          dir: resolvePath('lib'),
+          dir: resolvePath('dist/lib'),
           //让打包目录和我们目录对应
           preserveModules: true,
-          preserveModulesRoot: './components',
+          preserveModulesRoot: '.',
         },
       ],
     },
@@ -49,8 +55,8 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      outputDir: resolvePath('typings'),
-      tsConfigFilePath: resolvePath('../tsconfig.json'),
+      outputDir: resolvePath('dist/typings'),
+      tsConfigFilePath: resolvePath('./tsconfig.json'),
     }),
   ],
 })

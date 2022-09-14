@@ -1,5 +1,5 @@
 {
-  "name": "@wjl-ui/examples",
+  "name": "@narcissus/examples",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -14,6 +14,6 @@
     "vue": "^3.2.37"
   },
   "dependencies": {
-    "wjl-ui": "workspace:^1.0.1"
+    "@narcissus/wjl-ui": "workspace:^1.0.1"
   }
 }

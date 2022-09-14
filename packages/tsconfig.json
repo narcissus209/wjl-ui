@@ -15,7 +15,11 @@
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+    }
   },
-  "include": ["env.d.ts"]
+  "include": ["index.ts", "utils/**/*.ts", "components/**/*.ts", "components/**/*.vue"]
 }

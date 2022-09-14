@@ -1,7 +1,9 @@
 <template>
-  <button class="ant-button">{{ msg }}</button>
+  <ElButton class="ant-button">{{ msg }}</ElButton>
 </template>
 <script lang="ts" setup>
+import { ElButton } from 'element-plus'
+import 'element-plus/lib/components/button/style'
 withDefaults(
   defineProps<{
     type?: 'default' | 'primary' | 'success' | 'warning' | 'danger'
@@ -15,7 +17,7 @@ withDefaults(
   },
 )
 </script>
-<style lang="less" scoped>
+<style scoped>
 .ant-button {
   font-size: 18px;
   color: red;

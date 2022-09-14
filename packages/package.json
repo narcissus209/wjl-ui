@@ -2,9 +2,9 @@
   "name": "@narcissus/wjl-ui",
   "version": "1.0.1",
   "description": "A Component Library for Vue3",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "typings": "typings/index.d.ts",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.js",
+  "typings": "dist/typings/index.d.ts",
   "files": [
     "es",
     "lib",
@@ -30,5 +30,8 @@
     "vite-plugin-dts": "^1.4.1",
     "vue": "^3.2.37",
     "vue-tsc": "^0.34.7"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.16"
   }
 }
