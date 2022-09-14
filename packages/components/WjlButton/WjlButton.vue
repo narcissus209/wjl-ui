@@ -3,7 +3,7 @@
 </template>
 <script lang="ts" setup>
 import { ElButton } from 'element-plus'
-import 'element-plus/lib/components/button/style'
+import 'element-plus/es/components/button/style/css'
 withDefaults(
   defineProps<{
     type?: 'default' | 'primary' | 'success' | 'warning' | 'danger'
