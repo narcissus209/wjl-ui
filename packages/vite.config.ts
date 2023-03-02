@@ -16,7 +16,7 @@ export default defineConfig({
   },
   build: {
     //打包文件目录
-    outDir: 'dist',
+    outDir: './',
     //压缩
     minify: false,
     //css分离
@@ -35,7 +35,7 @@ export default defineConfig({
           //不用打包成.es.js,这里我们想把它打包成.js
           entryFileNames: '[name].js',
           //配置打包根目录
-          dir: resolvePath('dist/es'),
+          dir: resolvePath('./es'),
           //让打包目录和我们目录对应
           preserveModules: true,
           preserveModulesRoot: '.',
@@ -44,7 +44,7 @@ export default defineConfig({
           format: 'cjs',
           entryFileNames: '[name].js',
           //配置打包根目录
-          dir: resolvePath('dist/lib'),
+          dir: resolvePath('./lib'),
           //让打包目录和我们目录对应
           preserveModules: true,
           preserveModulesRoot: '.',
@@ -55,7 +55,7 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      outputDir: resolvePath('dist/typings'),
+      outputDir: resolvePath('./typings'),
       tsConfigFilePath: resolvePath('./tsconfig.json'),
     }),
   ],
