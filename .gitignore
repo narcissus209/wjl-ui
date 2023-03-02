@@ -8,6 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+packages/es/
+packages/lib/
+packages/typings/
 
 .DS_Store
 dist
